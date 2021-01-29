@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CS322_PZ_V01_BojanPetrovic2745.Models.Patient>
+
+@{
+    ViewData["Title"] = "NotRecovered";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.jmbg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.simptomi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.terapija)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.izlecen)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.jmbg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.simptomi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.terapija)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.izlecen)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IDpa">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IDpa">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IDpa">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

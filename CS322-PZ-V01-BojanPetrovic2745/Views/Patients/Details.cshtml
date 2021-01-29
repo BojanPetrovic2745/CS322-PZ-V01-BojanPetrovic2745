@@ -1,0 +1,54 @@
+﻿@model CS322_PZ_V01_BojanPetrovic2745.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.prezime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.prezime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.jmbg)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.jmbg)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.simptomi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.simptomi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.terapija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.terapija)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.izlecen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.izlecen)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IDpa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
