@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using CS322_PZ_V01_BojanPetrovic2745.Data;
+﻿using CS322_PZ_V01_BojanPetrovic2745.Data;
 using CS322_PZ_V01_BojanPetrovic2745.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace CS322_PZ_V01_BojanPetrovic2745
 {
@@ -34,7 +31,7 @@ namespace CS322_PZ_V01_BojanPetrovic2745
 
         public async Task<ActionResult> NotRecovered()
         {
-            return View(await _context.Patient.Where(s => s.izlecen == false).ToArrayAsync());
+            return View(await _context.Patient.Where(s => s.izlecen == false).ToListAsync());
         }
 
         // GET: Patients/Details/5
